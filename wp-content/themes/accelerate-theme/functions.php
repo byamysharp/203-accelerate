@@ -85,3 +85,18 @@ function custom_excerpt_more($more) {
 	return '...<div class="read-more-link"><a  href="'. get_permalink() . '"><span>Read more</span> &rsaquo;</a></div>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
+
+function create_custom_post_types() {
+	register_post_type('case_studies',
+		array(
+			'labels' => array(
+				'name' => _('Case Studies'),
+				'singular_name' => _('Case Study')
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array( 'slug' => 'case-studies'),
+		)
+	);
+}
+add_action( 'init', 'create_custom_post_types');

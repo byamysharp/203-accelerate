@@ -47,3 +47,90 @@ Text Domain:  accelerate-theme-child
 	color: #45ac9d;
 	text-transform: uppercase;
 }
+
+/* Case Studies */
+aside.case-study-sidebar {
+    float: left;
+    width: 300px;
+}
+
+div.case-study-images {
+    float: left;
+    width: 606px;
+}
+
+ul.homepage-featured-work{
+    list-style-type: none;
+}
+
+.navigation {
+	background: #fff;
+	border: solid #bfbfbf;
+	border-width: 1px 0 0 0;
+	clear: both;
+	font: 0.8em/4.08 'OpenSans', Arial, sans-serif;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	margin: 75px 156px -30px 156px;
+	text-align: center;
+}
+.navigation a {
+	color: #150300;
+	text-decoration: none;
+	font-weight: 600;
+	padding: 0 12px;
+}
+.navigation a:hover {
+	text-decoration: underline;
+}
+.navigation .left,
+.navigation .right {
+	color: #45ac9d;
+    text-transform: uppercase;
+}
+.navigation .left {
+	float: left;
+}
+.navigation .right {
+	float: right;
+}
+.navigation .pages {
+	color: #a6a6a6;
+}
+
+.social-btns {
+	margin: 35px 0;
+}
+.social-btns .soc-icon {
+	background: url(../img/soc-sprite.png) no-repeat;
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	margin-left: 2px;
+    -webkit-transition: 500ms ease-in-out;
+    -moz-transition: 500ms ease-in-out;
+    -o-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+}
+.social-btns .soc-icon.tw {
+	background-position: 0 0;
+}
+.social-btns .soc-icon.fb {
+	background-position: -28px 0;
+}
+.social-btns .soc-icon.ln {
+	background-position: -56px 0;
+}
+.social-btns .soc-icon.db {
+	background-position: -83px 0;
+	width: 23px;
+}
+.social-btns .soc-icon:hover {
+	-moz-transform: scale(1) rotate(360deg);
+	-webkit-transform: scale(1) rotate(360deg);
+	-o-transform: scale(1) rotate(360deg);
+	-ms-transform: scale(1) rotate(360deg);
+	transform: scale(1) rotate(360deg);
+}
+
