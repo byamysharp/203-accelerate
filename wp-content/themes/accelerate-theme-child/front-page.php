@@ -36,7 +36,7 @@ get_header(); ?>
 						<figure>
 							<?php echo wp_get_attachment_image($image_1, $size); ?>
 						</figure>
-					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					</li>
   				<?php endwhile; ?> 
 			<?php wp_reset_query(); ?>
@@ -52,7 +52,6 @@ get_header(); ?>
   					<?php while ( have_posts() ) : the_post(); ?>
 						<h2><?php the_title(); ?></h2>
 						<?php the_excerpt(); ?>
-						<a href="<?php the_permalink(); ?>" class="read-more-link">Read More <span>&rsaquo;</span></a>
   					<?php endwhile; ?> 
 					<?php wp_reset_query(); ?>
 			</div>
