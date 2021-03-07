@@ -95,26 +95,9 @@ div.case-study-images {
 	color: #a6a6a6;
 }
 
-.featured-work {
-	width: 100%;
-	margin: 0;
-}
-
-ul {
-	overflow: hidden;
-}
-
-li {
-	width: 33%;
-	float: left;
-}
-
-li figure {
-	
-}
-
 .site-content {
 	width: 100%;
+	margin: none;
 }
 
 .featured-work .site-content h4 {
@@ -122,12 +105,15 @@ li figure {
 }
 
 .homepage-featured-work {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-left: 0px;
 	list-style-type: none;
-	margin: 0;
 }
 
 .individual-featured-work {
-	padding: 0;
+	
 }
 
 .individual-featured-work h3 {
