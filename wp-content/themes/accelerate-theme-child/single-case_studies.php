@@ -53,6 +53,6 @@ get_header(); ?>
 
 	</div><!-- #primary -->
     <div class="navigation container">
-		<div class="left">&larr;<a href="">back to work</a></div>
+		<div class="left">&larr;<a href="<?php echo site_url('/case-studies/') ?>">back to work</a></div>
     </div>
 <?php get_footer(); ?>

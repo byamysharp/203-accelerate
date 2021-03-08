@@ -122,10 +122,33 @@ div.case-study-images {
 }
 
 /* Case Studies Archive Page */
-h2 {
-
+.case-study-sidebar h2 {
+	font: inherit;
+	font-size: 1.35em;
+	margin-bottom: 2px;
 }
 
-h5 {
+.case-study-sidebar h5 {
+	font: inherit;
+	font-size: .75em;
+	margin-top: 0;
+	text-transform: none;
+	color: #909090;
+}
 
+.case-study-sidebar p {
+	color: #636161;
+	font-size: .875em;
+	margin: 20px 40px 10px 0;
+}
+
+.read-more-link a {
+	color: #45AC9D;
+	font-size: .9em;
+}
+
+.case-study-images img {
+	margin-bottom: 4em;
+	width: 100%;
+	height: auto;
 }
