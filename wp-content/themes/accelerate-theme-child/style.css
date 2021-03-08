@@ -112,11 +112,20 @@ div.case-study-images {
 	list-style-type: none;
 }
 
-.individual-featured-work {
-	
+.individual-featured-work h3 {
+	text-align: center;
+	padding-bottom: 40px;
+	font: 'OpenSans', Arial, sans-serif;
+	font-weight: bold;
+	margin: 15px 0 0 0;
+	font: inherit;
 }
 
-.individual-featured-work h3 {
-    text-align: center;
-    padding-bottom: 40px;
+/* Case Studies Archive Page */
+h2 {
+
+}
+
+h5 {
+
 }
