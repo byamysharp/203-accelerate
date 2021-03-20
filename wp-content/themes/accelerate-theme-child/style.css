@@ -152,3 +152,18 @@ div.case-study-images {
 	width: 100%;
 	height: auto;
 }
+
+
+/* FOOTER STYLES */
+.site-footer .social-media-menu {
+	background: #3a3939;
+	color: #ffffff;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	font-size: 30px;
+	padding: 0 5px;
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+}
