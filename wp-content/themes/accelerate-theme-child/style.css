@@ -155,15 +155,25 @@ div.case-study-images {
 
 
 /* FOOTER STYLES */
-.site-footer .social-media-menu {
-	background: #3a3939;
-	color: #ffffff;
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
-	font-size: 30px;
-	padding: 0 5px;
+
+.social-media-navigation {
+	width: 11%;
+}
+
+.social-media-navigation .social-media-menu {
 	display: flex;
 	justify-content: space-between;
 	list-style-type: none;
+}
+
+.social-media-navigation .social-media-menu li {
+	background: #3a3939;
+	color: white;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	font-size: 16px;
+	padding-left: 0 5px;
+	text-align: center;
+	vertical-align: middle;
 }
