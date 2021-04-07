@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Accelerate Marketing functions and definitions
  *
@@ -26,47 +27,51 @@
  */
 
 // Theme support for menus
-function accelerate_setup() {
+function accelerate_setup()
+{
 
-    /*
+	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
 	 * hard-coded <title> tag in the document head, and expect WordPress to
 	 * provide it for us.
 	 */
-	add_theme_support( 'title-tag' );
+	add_theme_support('title-tag');
 
-    // Register Menus
-    register_nav_menus( array (
-        'top-nav' => __( 'Top Nav', 'accelerate' ),
-        'social-media'  => __( 'Social Media Nav', 'accelerate' ),
-    ) );
+	// Register Menus
+	register_nav_menus(array(
+		'top-nav' => __('Top Nav', 'accelerate'),
+		'social-media'  => __('Social Media Nav', 'accelerate'),
+	));
 }
-add_action( 'after_setup_theme', 'accelerate_setup' );
+add_action('after_setup_theme', 'accelerate_setup');
 
 // Enqueue scripts and styles.
-function accelerate_scripts() {
-	wp_enqueue_style( 'accelerate-style', get_stylesheet_uri() );
-    wp_enqueue_style( 'accelerate-google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,600,600i,700,700i' );
+function accelerate_scripts()
+{
+	wp_enqueue_style('accelerate-style', get_stylesheet_uri());
+	wp_enqueue_style('accelerate-google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,600,600i,700,700i');
 }
-add_action( 'wp_enqueue_scripts', 'accelerate_scripts' );
+add_action('wp_enqueue_scripts', 'accelerate_scripts');
 
 // Register widget area
-function accelerate_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Widget Area', 'accelerate' ),
+function accelerate_widgets_init()
+{
+	register_sidebar(array(
+		'name'          => __('Widget Area', 'accelerate'),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your blog sidebar.', 'accelerate' ),
+		'description'   => __('Add widgets here to appear in your blog sidebar.', 'accelerate'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	));
 }
-add_action( 'widgets_init', 'accelerate_widgets_init' );
+add_action('widgets_init', 'accelerate_widgets_init');
 
 // Defines custom markup for post comments
-function accelerate_comments($comment, $args, $depth) {
+function accelerate_comments($comment, $args, $depth)
+{
 	$comment  = '<li class="comment">';
 	$comment .=	'<header class="comment-head">';
 	$comment .= '<span class="comment-author">' . get_comment_author() . '</span>';
@@ -81,22 +86,8 @@ function accelerate_comments($comment, $args, $depth) {
 }
 
 // Changes excerpt symbol
-function custom_excerpt_more($more) {
-	return '...<div class="read-more-link"><a  href="'. get_permalink() . '"><span>Read more</span> &rsaquo;</a></div>';
+function custom_excerpt_more($more)
+{
+	return '...<div class="read-more-link"><a  href="' . get_permalink() . '"><span>Read more</span> &rsaquo;</a></div>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
-
-function create_custom_post_types() {
-	register_post_type('case_studies',
-		array(
-			'labels' => array(
-				'name' => _('Case Studies'),
-				'singular_name' => _('Case Study')
-			),
-			'public' => true,
-			'has_archive' => true,
-			'rewrite' => array( 'slug' => 'case-studies'),
-		)
-	);
-}
-add_action( 'init', 'create_custom_post_types');
