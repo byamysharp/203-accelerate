@@ -30,7 +30,7 @@ get_header(); ?>
 			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
 				<?php while ( have_posts() ) : the_post();
 					$image_1 = get_field("image_1");
-					$size = medium;
+					$size = "medium";
 				?>
 					<li class="individual-featured-work">
 						<figure>
